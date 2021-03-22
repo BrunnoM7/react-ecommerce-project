@@ -33,17 +33,15 @@ class App extends React.Component {
           });
         });
         
+        this.setState({ currentUser: userAuth })
       }
-      this.setState({ currentuser: userAuth })
     })
-
-    
   }
 
   render() {
     return (
       <div>
-        <Header currentUser={this.state.currentuser} />
+        <Header currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
